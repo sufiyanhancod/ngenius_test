@@ -21,8 +21,8 @@ platforms.
 
 Before running this project, ensure you have the following:
 
-- Flutter SDK (version X.X.X or higher)
-- Dart SDK (version X.X.X or higher)
+- Flutter SDK (version 3.27.0 or higher)
+- Dart SDK (version 3.6.0 or higher)
 - Ngenius API credentials
   - API Key
   - Outlet Reference ID
@@ -32,7 +32,7 @@ Before running this project, ensure you have the following:
 
 1. Clone the repository:
    ```bash
-   git clone https://github.com/yourusername/ngenius_test.git
+   git clone https://github.com/sufiyanhancod/ngenius_test.git
    ```
 
 2. Navigate to project directory:
@@ -44,32 +44,6 @@ Before running this project, ensure you have the following:
    ```bash
    flutter pub get
    ```
-
-4. Configure environment variables:
-   - Create a `.env` file in the root directory
-   - Add your Ngenius credentials:
-     ```
-     NGENIUS_API_KEY=your_api_key
-     NGENIUS_OUTLET_REF=your_outlet_ref
-     ```
-
-## Project Structure
-
-```
-lib/
-├── config/
-│   ├── api_config.dart
-│   └── environment.dart
-├── models/
-│   ├── payment_request.dart
-│   └── payment_response.dart
-├── services/
-│   └── payment_service.dart
-├── screens/
-│   ├── payment_screen.dart
-│   └── payment_status_screen.dart
-└── main.dart
-```
 
 ## Usage
 
@@ -128,10 +102,10 @@ flutter test
 
 Use these test cards for development:
 
-- Visa: 4111 1111 1111 1111
-- Mastercard: 5555 5555 5555 4444
+- Visa: 4012001037167778
 - Expiry Date: Any future date
 - CVV: Any 3 digits
+- Name :- test
 
 ## Deployment
 
@@ -175,7 +149,7 @@ for details.
 
 ## Support
 
-For support, email: your.email@example.com
+For support, email: info@hancod.com
 
 ## Acknowledgments
 
