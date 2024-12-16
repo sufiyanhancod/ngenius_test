@@ -40,37 +40,59 @@ Before running this project, ensure you have the following:
    cd ngenius_test
    ```
 
-3. Install dependencies:
+3. Add Ngenius SDK dependency in your `pubspec.yaml`:
+   ```yaml
+   dependencies:
+     flutter:
+       sdk: flutter
+     ngenius_sdk:
+       git:
+         url: https://github.com/sufiyanhancod/ngenius_sdk
+      ref: main
+   ```
+
+4. Install dependencies:
    ```bash
    flutter pub get
    ```
 
 ## Usage
 
-1. Initialize payment service:
+1. Import the package:
+   ```dart
+   import 'package:ngenius_sdk/ngenius_sdk.dart';
+   ```
 
-```dart
-final paymentService = NgeniusPaymentService(
-  apiKey: 'your_api_key',
-  outletRef: 'your_outlet_ref',
-);
-```
+2. Initialize Ngenius Checkout:
+   ```dart
+   NgeniusCheckout(
+     apiUrl: 'YOUR_API_URL',
+     apiKey: 'YOUR_API_KEY',
+     outletId: 'YOUR_OUTLET_ID',
+     currency: 'AED',
+     amount: '100', // Amount as an integer
+     onPaymentCreated: () {
+       // Handle successful payment
+     },
+     onError: () {
+       // Handle payment errors
+     },
+   )
+   ```
 
-2. Create payment request:
+3. Process payment using the widget:
+   ```dart
+   Scaffold(
+     body: Center(
+       child: NgeniusCheckout(
+         // ... your configuration
+       ),
+     ),
+   )
+   ```
 
-```dart
-final request = PaymentRequest(
-  amount: 100.0,
-  currency: 'AED',
-  reference: 'ORDER_123',
-);
-```
-
-3. Process payment:
-
-```dart
-final response = await paymentService.processPayment(request);
-```
+For more detailed implementation and features, please refer to the
+[Ngenius SDK documentation](https://github.com/sufiyanhancod/ngenius_sdk).
 
 ## API Integration
 
