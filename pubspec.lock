@@ -235,10 +235,11 @@ packages:
   ngenius_sdk:
     dependency: "direct main"
     description:
-      name: ngenius_sdk
-      sha256: c964d742a8caef1d850ea3f26f973128bee66944339c676c69384aca6cc6d157
-      url: "https://pub.dev"
-    source: hosted
+      path: "."
+      ref: main
+      resolved-ref: ef6eb547efa46add15f213880109dbc7a269c16f
+      url: "https://github.com/sufiyanhancod/ngenius_sdk"
+    source: git
     version: "0.0.13"
   path:
     dependency: transitive
